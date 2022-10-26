@@ -31,7 +31,7 @@ public class SortArrayBST {
         }else if(n<2){//one left : pnly node
             TreeNode root = new TreeNode(nums[0]);
             return root;
-        }else{
+        }else{//recursive case
             int p = n / 2;
             TreeNode root = new TreeNode(nums[p]);
             root.left = sortedArrayToBST(Arrays.copyOfRange(nums, 0, p));//recursive on the left half
